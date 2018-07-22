@@ -47,7 +47,7 @@ public class HibernateUtil implements Serializable {
 			return sessionFactory;
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new ExceptionInInitializerError("Erro ao criar conexÃ£o SessionFactory");
+			throw new ExceptionInInitializerError("Erro ao criar conexão SessionFactory");
 		}
 	}
 
