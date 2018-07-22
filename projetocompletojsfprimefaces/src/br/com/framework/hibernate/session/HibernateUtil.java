@@ -18,7 +18,7 @@ import br.com.framework.implementacao.crud.VariavelConexaoUtil;
 
 /**
  * 
- * @author Victor Respons·vel por estabelecer a conexao com o Hibernate
+ * @author Victor Respons√°vel por estabelecer a conexao com o Hibernate
  */
 @ApplicationScoped
 public class HibernateUtil implements Serializable {
@@ -32,7 +32,8 @@ public class HibernateUtil implements Serializable {
 	private static SessionFactory sessionFactory = buildSessionFactory();
 
 	/**
-	 * Respons·vel por ler o arquivo de configuraÁ„o do hibernate.cfg.xml
+	 * Respons√°vel por ler o arquivo de configura√ß√£o do hibernate.cfg.xml
+	 *Alterado com sucesso do git
 	 * 
 	 * @return SessionFactory
 	 */
@@ -46,7 +47,7 @@ public class HibernateUtil implements Serializable {
 			return sessionFactory;
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new ExceptionInInitializerError("Erro ao criar conex„o SessionFactory");
+			throw new ExceptionInInitializerError("Erro ao criar conex√£o SessionFactory");
 		}
 	}
 
@@ -61,7 +62,7 @@ public class HibernateUtil implements Serializable {
 	}
 
 	/**
-	 * Retorna a sess„o do SessionFactory
+	 * Retorna a sess√£o do SessionFactory
 	 * 
 	 * @return Session
 	 */
@@ -70,7 +71,7 @@ public class HibernateUtil implements Serializable {
 	}
 
 	/**
-	 * Abre uma nova sess„o no SessionFactory
+	 * Abre uma nova sess√£o no SessionFactory
 	 * 
 	 * @return Session
 	 */
@@ -83,7 +84,7 @@ public class HibernateUtil implements Serializable {
 	}
 
 	/**
-	 * Obtem a connection do provedor de conexıes configurado
+	 * Obtem a connection do provedor de conex√µes configurado
 	 * 
 	 * @return
 	 * @throws SQLException
