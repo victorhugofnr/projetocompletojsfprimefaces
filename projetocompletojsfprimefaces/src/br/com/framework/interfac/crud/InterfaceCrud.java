@@ -3,6 +3,10 @@ package br.com.framework.interfac.crud;
 import java.io.Serializable;
 import java.util.List;
 
+import org.hibernate.Session;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
+import org.springframework.jdbc.core.simple.SimpleJdbcTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -44,4 +48,19 @@ public interface InterfaceCrud<T> extends Serializable {
 	
 	//|Limpa a sessão do hibernate
 	void clearSession() throws Exception;
+	
+	//retira um objeto da sessão do hibernate
+	void evict (Object objs) throws Exception;
+	
+	Session getSession() throws Exception;
+	
+	List<?> getListSQLDinamica(String sql) throws Exception;
+	
+	//Jdbc do Spring Framework
+	JdbcTemplate getJdbcTemplate();
+	
+	SimpleJdbcTemplate getSimpleJdbcTemplate();
+	
+	SimpleJdbcInsert getSimpleJdbcInsert();
+	
 }
